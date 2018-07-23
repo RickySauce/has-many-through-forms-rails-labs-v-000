@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-
+    comment = Comment.create(comment_params)
   end
 
   private
