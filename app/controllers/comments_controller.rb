@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
   def create
     comment = Comment.create(comment_params)
     comment.user = User.find_or_create_by(username: params["comment"]["user_attributes"]["username"])
+    comment.save
     redirect_to post_path(comment.post)
   end
 
