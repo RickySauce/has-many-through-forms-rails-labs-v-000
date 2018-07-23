@@ -11,6 +11,7 @@
 <%end%>
 
 <%= form_for @comment do |f| %>
+  <%binding.pry%>
   <%= f.label "content" %>
   <%= f.text_field :content %>
   <%= f.collection_check_boxes :user_id, User.all, :id, :username %>
