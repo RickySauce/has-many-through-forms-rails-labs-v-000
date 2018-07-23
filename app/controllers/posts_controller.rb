@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   def create
     binding.pry
     post = Post.create(post_params)
-    redirect_to post
+    redirect_to post_path(post)
   end
 
   private
