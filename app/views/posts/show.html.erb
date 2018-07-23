@@ -10,7 +10,7 @@
 <%=link_to user.username, user_path(user) %>
 <%end%>
 
-<%= form_for comment do |f| %>
+<%= form_for @comment do |f| %>
 <%binding.pry%>
   <%= f.label "content" %>
   <%= f.text_field :comment_content %>
