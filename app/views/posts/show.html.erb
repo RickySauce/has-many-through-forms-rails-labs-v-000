@@ -14,6 +14,7 @@
   <%= f.label "content" %>
   <%= f.text_field :content %>
   <%= f.collection_check_boxes :user_id, User.all, :id, :username %>
+  <%binding.pry%>
   <%= f.fields_for :users, @comment.user.build do |user_fields| %>
     <%= user_fields.text_field :username %>
   <% end %>
