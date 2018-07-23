@@ -9,7 +9,7 @@
 <%@post.users.uniq.each do |user|%>
 <%=link_to user.username, user_path(user) %>
 <%end%>
-<%comment: Comment.new%>
+
 <%= form_for comment do |f| %>
 <%binding.pry%>
   <%= f.label "content" %>
