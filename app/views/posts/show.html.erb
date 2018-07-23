@@ -4,6 +4,7 @@
 <%=category.name %>
 <%end%>
 <%@post.comments.each do |comment|%>
+<%binding.pry%>
 <%="#{comment.user.username} says: #{comment.content}" if !comment.user.nil? %>
 <%end%>
 <%@post.users.uniq.each do |user|%>
