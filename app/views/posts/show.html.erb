@@ -13,6 +13,7 @@
 <%= form_for @comment do |f| %>
   <%= f.label "content" %>
   <%= f.text_field :content %>
+  <%=f.select(:post_id, @post.id) %>
   <%= f.collection_select :user_id, User.all, :id, :username %>
   <%= f.fields_for :users, @comment.user = User.create do |user_fields| %>
     <%= user_fields.text_field :username %>
